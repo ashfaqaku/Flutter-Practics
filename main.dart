@@ -43,15 +43,6 @@ void main() {
   print(uniqueList); 
 }
 /*Q5*/
-void main() {
-    List<int> numbers = [15, 28, 3, 41, 4,6,7, 52, 19, 64, 2, 30];
-    for (int num in numbers) {
-        if (num %2==0) {
-            print('${num}');
-        }
-    }
-}
-/*Q6*/
 
 import 'dart:io';  
 
@@ -68,7 +59,7 @@ void main() {
   
   print('Even numbers from the list: $evenNumbers');
 }
-/*Q7*/
+/*Q6*/
 
 void main() {
   Map<String, double> mathMarks = {
@@ -83,5 +74,25 @@ void main() {
 
   print(mathMarks);
 }
+
+/*Q7*/
+
+void main() {
+  Map<String, int> phoneBook = {
+    'John': 1234,
+    'Alice': 56789,
+    'Bob': 4321,
+    'Eva': 987654,
+  };
+
+  Iterable<String> keysWithLengthFour = phoneBook.keys.where((key) => key.length == 4);
+
+  String result = keysWithLengthFour.toList().join(', ');
+
+  print('Keys with length 4: $result');
+}
+
+
+
 
 
